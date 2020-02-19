@@ -29,6 +29,10 @@ public class PlayerMovement : MonoBehaviour
             gameObject.SetActive(false);
             duck.SetActive(true);
         }
+        if (Input.GetKeyDown("space"))
+        {
+            Application.Quit();
+        }
     }
 
     void OnCollisionEnter(Collision other)

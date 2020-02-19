@@ -833,7 +833,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3dcd9795ce42744906779699aa682c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabProjectile: {fileID: 6805595566677270662, guid: 7d10dd46ea81c184d8e72c029425551d,
+  prefabBullet: {fileID: 6805595566677270662, guid: 7d10dd46ea81c184d8e72c029425551d,
+    type: 3}
+  prefabCactus: {fileID: 1515799475216894416, guid: 3e098d4e2bd95574c9166c4e10317ba3,
     type: 3}
   velMult: 100
 --- !u!4 &1677274837
