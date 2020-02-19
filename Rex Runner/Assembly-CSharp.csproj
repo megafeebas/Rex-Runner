@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\ProjectileMovement.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Jonathan/Documents/GitHub/Rex Runner/Rex-Runner/Rex Runner/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

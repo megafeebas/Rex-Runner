@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
   
     private Rigidbody rb;
     bool canJump;
+    GameObject player;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canJump)
         {
             rb.velocity = new Vector3(0, 5f, 0);
             print(Random.Range(0f,10f));
@@ -29,6 +30,14 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             canJump = true;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Projectile"))
+        {
+            Destroy(this);
         }
     }
 }
