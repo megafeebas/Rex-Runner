@@ -1,23 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ProjectileMovement : MonoBehaviour
 {
     static private ProjectileMovement S;
 
+
     [Header("Set in Inspector")]
     public GameObject prefabBullet;
     public GameObject prefabCactus;
+    public Text Score;
+    public Text HighScore;
+    int score;
     public float velMult = 100f;
 
     void Awake()
     {
-      
+        GameObject scoreGO = GameObject.Find("Score");
+        Score = scoreGO.GetComponent<Text>();
+        Score.text = "Score: 0";
     }
     void Start()
     {
+        score = 0;
+    }
 
+    void Update()
+    {
+        score++;
+        Score.text = "Score: " + score;
+        int hScore = int.Parse(HighScore.text.Substring(12));
+        if (score > hScore)
+        {
+            hScore = score;
+            HighScore.text = "High Score: " + hScore;
+        }
     }
 
     // Update is called once per frame

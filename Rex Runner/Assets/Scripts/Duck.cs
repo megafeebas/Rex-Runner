@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Duck : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject player;
+
     void Awake()
     {
         gameObject.SetActive(false);
@@ -18,6 +20,7 @@ public class Duck : MonoBehaviour
         {
             StartCoroutine(Wait());
         }
+
     }
     IEnumerator Wait()
     {
