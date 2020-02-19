@@ -16,13 +16,11 @@ public class Duck : MonoBehaviour
     {
         if (gameObject.active)
         {
-            print("okay");
             StartCoroutine(Wait());
         }
     }
     IEnumerator Wait()
     {
-        print("mhm");
         yield return new WaitForSeconds(1);
         gameObject.SetActive(false);
         player.SetActive(true);

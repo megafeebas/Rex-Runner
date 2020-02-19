@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-  
-    private Rigidbody rb;
-    bool canJump;
 
     [Header("Set in Inspector")]
     public GameObject duck;
+
+    private Rigidbody rb;
+    bool canJump;
 
     void Start()
     {
@@ -42,14 +43,18 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Projectile"))
         {
-            print("Hit");
             Destroy(gameObject);
             GameObject[] tProjectileArray = GameObject.FindGameObjectsWithTag("Projectile");
             foreach (GameObject tGO in tProjectileArray)
             {
                 Destroy(tGO);
             }
-            Application.Quit();
+            StartCoroutine(Wait());
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+    }
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2);
     }
 }
