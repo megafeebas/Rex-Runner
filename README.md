@@ -1,1 +1,3 @@
 # Rex-Runner
+
+The game idea is similar to the T-rex running game that you play when you have no internet connection on Google Chrome. You need to jump over cactuses using MouseKey(0) and Duck under bullets using MouseKey(1). Bullets and cactuses will randomly spawn depending on a Random Number Generator. However, the game is not optimized so it may not be feasible to practically play as too many projectiles can come at once. 
