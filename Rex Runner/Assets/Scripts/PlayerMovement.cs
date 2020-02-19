@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && canJump)
         {
             rb.velocity = new Vector3(0, 5f, 0);
-            print(Random.Range(0f,10f));
             canJump = false;
         }
     }
@@ -37,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Projectile"))
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }

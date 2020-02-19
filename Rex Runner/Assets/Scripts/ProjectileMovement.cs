@@ -6,17 +6,13 @@ public class ProjectileMovement : MonoBehaviour
 {
     static private ProjectileMovement S;
 
-    public GameObject projectile;
+    [Header("Set in Inspector")]
     public GameObject prefabProjectile;
-    private Rigidbody projectileRigidbody;
-    public Vector3 launchPos;
-    public float velocity = 5f;
+    public float velMult = 100f;
 
     void Awake()
     {
-        Transform launchPoint = transform.Find("Shooter");
-        launchPos = launchPoint.position;
-        projectileRigidbody = projectile.GetComponent<Rigidbody>();
+      
     }
     void Start()
     {
@@ -27,11 +23,14 @@ public class ProjectileMovement : MonoBehaviour
     void FixedUpdate()
     {
         float randNum = Random.Range(0f, 1f);
-        if(randNum < .1)
+        if(randNum <= 0.01)
         {
-            projectile = Instantiate(prefabProjectile);
-            projectile.transform.position = launchPos;
-            projectile.velocity = new Vector3(0f, 5f, 0f);
+            print("we here");
+            GameObject projectile = Instantiate(prefabProjectile) as GameObject;
+            Rigidbody projRigidbody = projectile.GetComponent<Rigidbody>();
+            Vector3 movement = new Vector3(5f, 0f, 0f);
+            projRigidbody.AddForce(movement* -velMult);
+            
         }
     }
 }
