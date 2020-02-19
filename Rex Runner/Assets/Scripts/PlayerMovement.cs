@@ -16,7 +16,13 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
+    void Update()
+    {
+        if (!duck.active)
+        {
+            gameObject.SetActive(true);
+        }
+    }
     void FixedUpdate()
     {
         if (Input.GetMouseButtonDown(0) && canJump)

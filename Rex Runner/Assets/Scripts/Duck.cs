@@ -5,6 +5,7 @@ using UnityEngine;
 public class Duck : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject player;
     void Awake()
     {
         gameObject.SetActive(false);
@@ -16,7 +17,7 @@ public class Duck : MonoBehaviour
         if (gameObject.active)
         {
             print("okay");
-            Wait();
+            StartCoroutine(Wait());
         }
     }
     IEnumerator Wait()
@@ -24,5 +25,6 @@ public class Duck : MonoBehaviour
         print("mhm");
         yield return new WaitForSeconds(1);
         gameObject.SetActive(false);
+        player.SetActive(true);
     }
 }
