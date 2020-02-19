@@ -370,7 +370,7 @@ MonoBehaviour:
   - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Jonathan\Documents\GitHub\Rex Runner\Rex-Runner\Rex
-    Run
+    Runner
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 1.2026688, y: 2.006458, z: -2.7647362}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -623,11 +623,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
-    m_Value: {x: -0.016498948, y: 0.005999106, z: -0.00009899472, w: -0.9998453}
+    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
     m_Target: 10
     speed: 2
-    m_Value: 25.808031
+    m_Value: 10
   m_Ortho:
     m_Target: 0
     speed: 2
