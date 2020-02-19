@@ -29,7 +29,7 @@ public class ProjectileMovement : MonoBehaviour
             GameObject projectile = Instantiate(prefabProjectile) as GameObject;
             Rigidbody projRigidbody = projectile.GetComponent<Rigidbody>();
             Vector3 movement = new Vector3(5f, 0f, 0f);
-            projRigidbody.AddForce(movement* -velMult);
+            projRigidbody.AddForce(movement * -velMult);
             
         }
     }

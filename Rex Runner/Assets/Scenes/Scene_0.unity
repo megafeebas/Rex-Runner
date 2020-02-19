@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 813922032}
   - component: {fileID: 813922031}
   - component: {fileID: 813922033}
+  - component: {fileID: 813922034}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -288,6 +289,14 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: -5.5, y: -3, z: 0}
+--- !u!33 &813922034
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813922029}
+  m_Mesh: {fileID: 0}
 --- !u!1 &989052943
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,12 +690,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de3dcd9795ce42744906779699aa682c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 6805595566677270662, guid: 7d10dd46ea81c184d8e72c029425551d,
-    type: 3}
   prefabProjectile: {fileID: 6805595566677270662, guid: 7d10dd46ea81c184d8e72c029425551d,
     type: 3}
-  launchPos: {x: 0, y: 0, z: 0}
-  velocity: 5
+  velMult: 100
 --- !u!4 &1677274837
 Transform:
   m_ObjectHideFlags: 0
@@ -695,7 +701,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1677274835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.462257, y: -2.1791136, z: -0.10728645}
+  m_LocalPosition: {x: 18.06, y: 1.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     bool canJump;
     GameObject player;
+    GameObject duck;
 
     void Start()
     {
@@ -21,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.velocity = new Vector3(0, 5f, 0);
             canJump = false;
+        }
+        if (Input.GetMouseButtonDown(1) && canJump)
+        {
+            print("Here");
+            player.SetActive(false);
+            //duck.SetActive(true);
         }
     }
 
