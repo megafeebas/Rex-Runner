@@ -25,7 +25,6 @@ public class ProjectileMovement : MonoBehaviour
         float randNum = Random.Range(0f, 1f);
         if(randNum <= 0.01)
         {
-            print("we here");
             GameObject projectile = Instantiate(prefabProjectile) as GameObject;
             Rigidbody projRigidbody = projectile.GetComponent<Rigidbody>();
             Vector3 movement = new Vector3(5f, 0f, 0f);

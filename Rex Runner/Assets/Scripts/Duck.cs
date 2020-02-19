@@ -15,13 +15,14 @@ public class Duck : MonoBehaviour
     {
         if (gameObject.active)
         {
+            print("okay");
             Wait();
-
         }
     }
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(3);
+        print("mhm");
+        yield return new WaitForSeconds(1);
         gameObject.SetActive(false);
     }
 }

@@ -7,8 +7,9 @@ public class PlayerMovement : MonoBehaviour
   
     private Rigidbody rb;
     bool canJump;
-    GameObject player;
-    GameObject duck;
+
+    [Header("Set in Inspector")]
+    public GameObject duck;
 
     void Start()
     {
@@ -25,9 +26,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(1) && canJump)
         {
-            print("Here");
-            player.SetActive(false);
-            //duck.SetActive(true);
+            gameObject.SetActive(false);
+            duck.SetActive(true);
         }
     }
 
