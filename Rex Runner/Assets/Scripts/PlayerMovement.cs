@@ -16,13 +16,6 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
-    {
-        if (!duck.active)
-        {
-            gameObject.SetActive(true);
-        }
-    }
     void FixedUpdate()
     {
         if (Input.GetMouseButtonDown(0) && canJump)
@@ -49,7 +42,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Projectile"))
         {
+            print("Hit");
             Destroy(gameObject);
+            GameObject[] tProjectileArray = GameObject.FindGameObjectsWithTag("Projectile");
+            foreach (GameObject tGO in tProjectileArray)
+            {
+                Destroy(tGO);
+            }
+            Application.Quit();
         }
     }
 }

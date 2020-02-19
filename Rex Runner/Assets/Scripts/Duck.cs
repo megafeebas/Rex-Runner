@@ -27,4 +27,17 @@ public class Duck : MonoBehaviour
         gameObject.SetActive(false);
         player.SetActive(true);
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Projectile"))
+        {
+            print("Hit");
+            Destroy(gameObject);
+            GameObject[] tProjectileArray = GameObject.FindGameObjectsWithTag("Projectile");
+            foreach (GameObject tGO in tProjectileArray)
+            {
+                Destroy(tGO);
+            }
+        }
+    }
 }
