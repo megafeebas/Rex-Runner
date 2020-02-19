@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Duck : MonoBehaviour
 {
@@ -24,7 +23,7 @@ public class Duck : MonoBehaviour
     }
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(.5f);
         gameObject.SetActive(false);
         player.SetActive(true);
     }
