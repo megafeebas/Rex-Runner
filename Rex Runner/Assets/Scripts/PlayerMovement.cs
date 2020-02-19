@@ -6,8 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
   
     private Rigidbody rb;
-    public float speed;
-    bool mouseDown = false;
+    bool canJump;
 
     void Start()
     {
@@ -17,16 +16,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (mouseDown)
+        if (Input.GetMouseButtonDown(0))
         {
-            Vector3 movement = new Vector3(0, 1.0f, 0);
+            rb.velocity = new Vector3(0, 5f, 0);
             print(Random.Range(0f,10f));
-            rb.AddForce(movement * speed);
+            canJump = false;
         }
     }
 
-    void OnMouseDown()
+    void OnCollisionEnter(Collision other)
     {
-        mouseDown = true;
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            canJump = true;
+        }
     }
 }
